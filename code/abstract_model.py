@@ -93,14 +93,14 @@ class Qa_model(object):
 
         logging.info("Data preparation. This can take some seconds...")
         # load vocab
-        with open(self.FLAGS.data_dir + "vocab.dat", "r") as f:
+        with open(self.FLAGS.glove_dir + "vocab.dat", "r") as f:
             self.vocab = f.readlines()
         self.vocab = [x[:-1] for x in self.vocab]
         # load word embedding
         if self.FLAGS.word_vec_dim == 300:
-            self.WordEmbeddingMatrix = np.load(self.FLAGS.data_dir + "glove.trimmed.300.npz")['glove']
+            self.WordEmbeddingMatrix = np.load(self.FLAGS.glove_dir + "glove.trimmed.300.npz")['glove']
         elif self.FLAGS.word_vec_dim == 100:
-            self.WordEmbeddingMatrix = np.load(self.FLAGS.data_dir + "glove.trimmed.100.npz")['glove']
+            self.WordEmbeddingMatrix = np.load(self.FLAGS.glove_dir + "glove.trimmed.100.npz")['glove']
         else:
             raise ValueError("word_vec_dim can be either 100 or 300")
         logging.debug("WordEmbeddingMatrix.shape={}".format(self.WordEmbeddingMatrix.shape))
