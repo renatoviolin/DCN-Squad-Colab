@@ -478,6 +478,7 @@ class Qa_model(object):
                     sq_ems, sq_f1s = [], []
 
             ############## SAVING CHECKPOINT MODEL ###################################
+            saver = tf.train.Saver()
             save_path = saver.save(sess, self.FLAGS.checkpoint_dir+"model.ckpt")
             logging.info("Model saved in path: %s" % save_path)
 
