@@ -24,10 +24,12 @@ tf.app.flags.DEFINE_integer("decrease_lr", 0, "Whether to decrease learning rate
 tf.app.flags.DEFINE_float("lr_d_base", 0.9997, "Base for the exponential decay of lr")
 tf.app.flags.DEFINE_float("lr_divider", 2, "Due to exp. decay, lr can get as small as lr/lr_divider but not smaller")
 # tf.app.flags.DEFINE_string("data_dir", "data/squad/", "SQuAD data directory")
-tf.app.flags.DEFINE_string("data_dir", "/gdrive/My Drive/Colab Notebooks/DCN/data/squad_min/", "SQuAD data directory")
+tf.app.flags.DEFINE_string("data_dir", "/content/DCN-Squad-Colab/data/squad_min/", "SQuAD data directory")
 tf.app.flags.DEFINE_string("checkpoint_dir", "/gdrive/My Drive/Colab Notebooks/DCN/model/", "Tensorflow Chekpoints")
 
+
 FLAGS = tf.app.flags.FLAGS
+
 
 def main(_):
     # I do not use the code supplied by the CS224n staff for this main method
