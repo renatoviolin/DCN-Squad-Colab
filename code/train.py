@@ -29,7 +29,6 @@ tf.app.flags.DEFINE_string("checkpoint_dir", "/gdrive/My Drive/Colab Notebooks/D
 
 FLAGS = tf.app.flags.FLAGS
 
-
 def main(_):
     # I do not use the code supplied by the CS224n staff for this main method
     # Just create a model, train it and evaluate on validation set
