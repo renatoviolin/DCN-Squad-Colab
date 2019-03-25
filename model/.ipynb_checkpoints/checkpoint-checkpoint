@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/renato/DCN-Squad-Colab/model/model.ckpt"
+all_model_checkpoint_paths: "/home/renato/DCN-Squad-Colab/model/model.ckpt"
